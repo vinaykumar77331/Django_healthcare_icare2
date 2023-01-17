@@ -1,0 +1,44 @@
+{% extends 'adminhome.html' %}
+
+{% load static %}
+
+{% block About %}
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            
+            <h1> Appoint User Details </h1>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>RegID</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Mobile</th>
+                    <th>Specialization</th>
+                    <th>City</th>
+                    <th>Gender</th>
+                    <th>Info</th>
+                    <th>Status</th>
+                    
+                </tr>
+                {% for row in vDetails %}
+                <tr>
+                    <td>{{row.regid}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.date}}</td>
+                    <td>{{row.mobile}}</td>
+                    <td>{{row.specialization}}</td>
+                    <td>{{row.city}}</td>
+                    <td>{{row.gender}}</td>
+                    <td>{{row.info}}</td>
+                    <td>{{row.status}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

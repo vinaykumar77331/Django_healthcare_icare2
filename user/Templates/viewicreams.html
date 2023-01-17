@@ -1,0 +1,52 @@
+{% extends 'userhome.html' %}
+
+{% load static %}
+
+
+{% block About %}
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <!-- <div class="row justify-content-center"> -->
+            <style>
+                #catmain {
+                    min-height: 300px;
+                    width: 600px;
+                }
+
+                .catmain_part {
+                    height: 150px;
+                    width: 200px;
+                    float: left;
+                    margin-top: 20px;
+                }
+
+                .catmain_part img {
+                    border: 1px solid rgb(161, 24, 3);
+                }
+                .vinay{
+                    text-align: center;
+                }
+            </style>
+            <center>
+            <div class="vinay">
+            <h2 >Category list >></h2>
+            </div>
+            </center>
+            <br/>
+            <center>
+            <div id="catmain">
+                {% for row in clist %}
+                
+                <a href="/user/viewsubcat/?catname={{row.catname}}">
+                    <div class="catmain_part">
+                        <img src="{{media_url}}{{row.caticonname}}" height="140" width="190" />
+                        <br>
+                        <b>{{row.catname}}</b>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </center>
+        </div>
+    </div>
+{% endblock %} 

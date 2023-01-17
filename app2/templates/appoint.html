@@ -1,0 +1,81 @@
+{% extends 'master_template.html' %}
+{% load static %}
+
+{% block Portfolio %}
+<!-- Portfolio Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <br /><br />
+        <fieldset style="border:2px solid black; padding: 50px; background-color: #F195B2;" >
+        <!--<div class="d-flex justify-content-center">-->
+        <form method="POST" action="/appoint/">
+          {% csrf_token %}
+          <h2>APPOINTMENT FORM!!!</h2>
+          <p style="color:blue;">{{output}}</p>
+          <div class="form-group" style="margin-top:20px;">
+            <label for="name">Patients Name:</label>
+            <input type="text" class="form-control" name="name">
+          </div>
+          
+          <div class="form-group">
+            <label for="pwd">Date:</label>
+            <input type="date" class="form-control" name="date">
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="text" class="form-control" name="mobile">
+          </div>
+          <div class="form-group">
+            <label for="specialization">Specialization:</label>
+            <textarea class="form-control" name="specialization" rows="5"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="catname">Choose Hospital:</label>
+            <select class=" form-control" name="catname">
+              <option>Select Category</option>
+              {% for row in clist %}
+              <option>{{row.catname}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            Male <input type="radio" name="gender" value="male">
+            &nbsp;&nbsp;
+            Female <input type="radio" name="gender" value="female">
+          </div>
+          <button type="submit" class="btn btn-success">Book Appoinment</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+</fieldset>
+{% endblock %}
+
+{% block About %}
+{% endblock %}
+
+{% block Video %}
+{% endblock %}
+
+{% block Carousel %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block Services %}
+{% endblock %}
+
+{% block Products %}
+{% endblock %}
+
+{% block Team %}
+{% endblock %}
+
+{% block Testimonial %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'adminhome.html' %}
+
+{% load static %}
+
+{% block About %}
+<!-- About Start -->
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <br />
+      <div class="d-flex justify-content-center">
+        <fieldset style="border:2px solid black; padding: 50px;">
+          <form method="POST" enctype="multipart/form-data" action="/myadmin/addcategory/">
+            {% csrf_token %}
+            <h2>Add Category Here!!!</h2>
+            <p style="color:blue;">{{output}}</p>
+            <div class="form-group">
+              <label for="category">Category Name:</label>
+              <input type="text" class=" form-control" name="catname">
+            </div>
+            <div class="form-group">
+              <label for="categoryicon">Category Icon:</label>
+              <input type="file" class="form-control" name="caticon">
+            </div>
+            <button type="submit" class="btn btn-success">Add Category</button>
+          </form>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

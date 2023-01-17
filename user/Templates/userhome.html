@@ -1,0 +1,126 @@
+{% extends 'master_template.html' %}
+
+{% block trackingid %}
+<a class="text-white px-3" href="email">
+    <i>{{sunm}}</i>
+    {% endblock %}
+
+    {% block Navbar %}
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="home.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>CARE</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="/user/" class="nav-item nav-link active">User Home</a>
+                        <a href="/user/viewicreams/" class="nav-item nav-link">View Hospitals</a>
+                        <a href="/user/funds/" class="nav-item nav-link">Funds</a>
+                        <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                            <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>CARE</h1>
+                        </a>
+
+                    </div>
+
+                    <div class="navbar-nav mr-auto py-0">
+
+                        <a href="/user/viewfunds/" class="nav-item nav-link">View Funds</a>
+                        <div class="dropdown show " style="padding:28px">
+                            <a style="color: black;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Settings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a href="/user/cpuser/" class="dropdown-item">Change Password</a>
+                                <a href="/user/epuser/" class="dropdown-item">Edit Profile</a>
+                            </div>
+                        </div>
+
+                        <a href="/login/" class="nav-item nav-link">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    {% block Video %}
+    {% endblock %}
+
+    {% block Carousel %}
+    {% endblock %}
+
+    {% block About %}
+    <br>
+    <center>
+        <h1> Welcome to User panel </h1>
+
+    </center>
+    {% endblock %}
+
+    {% block Promotion %}
+    {% endblock %}
+
+    {% block Services %}
+    {% endblock %}
+
+    {% block Portfolio %}
+    {% endblock %}
+
+    {% block Products %}
+    {% endblock %}
+
+    {% block Team %}
+    {% endblock %}
+
+    {% block Testimonial %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block Footer %}
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary">i</span>CARE</h1>
+                    </a>
+                </div>
+                <!--<div class="col-12 mb-4">
+                <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-12 mt-2 mb-4">
+                <div class="row">
+                    <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                        <h5 class="font-weight-bold mb-2">Get In Touch</h5>
+                        <p class="mb-2">123 Street, New York, USA</p>
+                        <p class="mb-0">+012 345 67890</p>
+                    </div>
+                    <div class="col-sm-6 text-center text-sm-left">
+                        <h5 class="font-weight-bold mb-2">Opening Hours</h5>
+                        <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
+                        <p class="mb-0">Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>-->
+                <div class="col-12">
+                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a
+                            href="https://htmlcodex.com">HTML Codex</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

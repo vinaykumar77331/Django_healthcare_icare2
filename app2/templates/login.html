@@ -1,0 +1,60 @@
+{% extends 'master_template.html' %}
+
+{% load static %}
+
+{% block About %}
+<!-- About Start -->
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+
+      <br /><br />
+      <div class="d-flex justify-content-center">
+        <fieldset style="border: 2px solid black; padding: 50px;">
+          <form method="POST" action="/login/">
+            {% csrf_token %}
+            <h2>Login Here!!!</h2>
+            <p style="color:blue;">{{output}}</p>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" class="form-control" name="email" value="{{cunm}}">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" name="password" value="{{cpass}}">
+            </div>
+            <div class="form-group">
+              <input type="checkbox"  name="chk" value="remember">  Remember me?
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+          </form>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block Video %}
+{% endblock %}
+
+{% block Carousel %}
+{% endblock %}
+
+{% block Promotion %}
+{% endblock %}
+
+{% block Services %}
+{% endblock %}
+
+{% block Portfolio %}
+{% endblock %}
+
+{% block Products %}
+{% endblock %}
+
+{% block Team %}
+{% endblock %}
+
+{% block Testimonial %}
+{% endblock %}
